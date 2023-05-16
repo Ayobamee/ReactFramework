@@ -4,7 +4,7 @@ import classes from "./PostsList.module.css";
 import NewPost from "./Newpost";
 import Modal from "./Modal";
 
-function PostsList({isPosting, onStopPosting}) {
+function PostsList({ isPosting, onStopPosting }) {
   const [enteredBody, setEnteredBody] = useState("");
   const [enteredAuthor, setEnteredAuthor] = useState("");
 
@@ -35,6 +35,7 @@ function PostsList({isPosting, onStopPosting}) {
           <NewPost
             onBodyChange={bodyChangeHandler}
             onAuthorChange={authorChangeHandler}
+            onCancel={onStopPosting}
           />
         </Modal>
       )}
