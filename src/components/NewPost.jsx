@@ -1,6 +1,6 @@
 import classes from "./NewPost.module.css";
 
-function NewPost(onBodyChange, onAuthorChange, onCancel) {
+function NewPost({ onBodyChange, onAuthorChange, onCancel }) {
   return (
     <form className={classes.form}>
       <p>
