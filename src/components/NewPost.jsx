@@ -20,7 +20,7 @@ function NewPost({ onCancel, onAddPost }) {
       body: enteredBody,
       author: enteredAuthor,
     };
-  
+
     onAddPost(postData);
     onCancel();
   }
@@ -28,11 +28,23 @@ function NewPost({ onCancel, onAddPost }) {
     <form className={classes.form} onSubmit={submitHandler}>
       <p>
         <label htmlFor="body">Write a Post</label>
-        <textarea id="body" required rows={3} onChange={bodyChangeHandler} />
+        <textarea
+          id="body"
+          data-testid="input-post-field"
+          required
+          rows={3}
+          onChange={bodyChangeHandler}
+        />
       </p>
       <p>
         <label htmlFor="name">Your name</label>
-        <input type="text" id="name" required onChange={authorChangeHandler} />
+        <input
+          type="text"
+          id="name"
+          data-testid="input-name-field"
+          required
+          onChange={authorChangeHandler}
+        />
       </p>
       <p className={classes.actions}>
         <button type="button" onClick={onCancel}>
